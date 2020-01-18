@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Departments
+   Show Department - {{ $dep->dep_name}}
 @endsection
 
 @section('content')
@@ -20,23 +20,23 @@
                         </div>
                     @endif
 
-                    <h5>Список департаментов</h5>
+                    <h5>Список должностей</h5>
                     <table class="table1" border="1"> 
                        <tr>
                             <th>
-                            Dep_Id
+                            Pos_Id
                             </th>
                             <th>
-                            Dep_Name
+                            Pos_Name
                             </th>
                             <th>
-                            Dep_Manage
+                            Pos_Manage
                             </th>
                        </tr>
-                       @foreach($deps as $dep)
+                       @foreach($poss as $pos)
                             <tr> 
-                                <td>{{$dep->id }}</td>
-                                <td>{{$dep->dep_name }}</td>
+                                <td>{{$pos->id }}</td>
+                                <td>{{$pos->pos_name }}</td>
                                 <td>
                                 |
                                 <a href="{{url('departments/'.$dep->id) }}">Details</a>

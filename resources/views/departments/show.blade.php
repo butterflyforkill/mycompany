@@ -49,6 +49,7 @@
                             </tr>
                        @endforeach
                     </table>
+                    <a href="{{ url('departments')}}">Назад к списку департаментов</a>
                 </div>
             </div>
         </div>
